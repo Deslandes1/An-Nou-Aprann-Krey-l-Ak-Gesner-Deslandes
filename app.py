@@ -156,6 +156,124 @@ _Ingeniero Gesner Deslandes en Globalinternet.py Compañía de Software_
 _Ingénieur Gesner Deslandes chez Globalinternet.py Entreprise de Logiciels_
 """
         }
+    },
+    "Lesson 2: Alfabè Kreyòl la (The 32 Letters)": {
+        "video_url": "https://dl.dropboxusercontent.com/scl/fi/7l45fvh05k2v5006b5mff/Alfabe.mp4?rlkey=vqy884w582npt3bypm5068lq8&st=alfb1&dl=1",
+        "captions": {
+            "Haitian Creole (Original)": """
+**Alfabè Kreyòl Ayisyen an genyen 32 lèt ladan li. Chak lèt gen yon sèl son inik. Ann aprann yo ansanm:**
+
+### Vwayèl ak Konsòn Prensipal yo
+* **A, B, Ch, D, E, È, F, G, H, I, J, K, L, M, N, NG, O, Ò, OU, P, R, S, T, UI, V, W, Y, Z.**
+* Gen vwayèl nan nen tou: **AN, EN, ON, OUN**.
+
+### Egzanp teknik:
+* **Klavye** — Timoun yo ap manyen klavye a pou aprann lèt yo.
+* **Lojisyèl** — Nou devlope lojisyèl sa a pou edike pwochen jenerasyon an.
+
+_Konpayi Teknoloji ak Edikasyon: GlobalInternet.py_
+""",
+            "English": """
+**The Haitian Creole Alphabet contains 32 letters. Each letter has a single unique sound. Let's learn them together:**
+
+### Main Vowels and Consonants
+* **A, B, Ch, D, E, È, F, G, H, I, J, K, L, M, N, NG, O, Ò, OU, P, R, S, T, UI, V, W, Y, Z.**
+* There are also nasal vowels: **AN, EN, ON, OUN**.
+
+### Technical Examples:
+* **Klavye (Keyboard)** — The children are handling the keyboard to learn the letters.
+* **Lojisyèl (Software)** — We developed this software to educate the next generation.
+
+_Technology and Education Company: GlobalInternet.py_
+""",
+            "Spanish": """
+**El alfabeto criollo haitiano contiene 32 letras. Cada letra tiene un único sonido. Aprendámoslas juntos:**
+
+### Vocales y Consonantes Principales
+* **A, B, Ch, D, E, È, F, G, H, I, J, K, L, M, N, NG, O, Ò, OU, P, R, S, T, UI, V, W, Y, Z.**
+* También hay vocales nasales: **AN, EN, ON, OUN**.
+
+### Ejemplos Técnicos:
+* **Klavye (Teclado)** — Los niños están manejando el teclado para aprender las letras.
+* **Lojisyèl (Software)** — Desarrollamos este software para educar a la próxima generación.
+
+_Compañía de Tecnología y Educación: GlobalInternet.py_
+""",
+            "French": """
+**L'alphabet créole haïtien contient 32 lettres. Chaque lettre a un son unique. Apprenons-les ensemble :**
+
+### Voyelles et Consonnes Principales
+* **A, B, Ch, D, E, È, F, G, H, I, J, K, L, M, N, NG, O, Ò, OU, P, R, S, T, UI, V, W, Y, Z.**
+* Il y a aussi des voyelles nasales : **AN, EN, ON, OUN**.
+
+### Exemples Techniques :
+* **Klavye (Clavier)** — Les enfants manipulent le clavier pour apprendre les lettres.
+* **Lojisyèl (Logiciel)** — Nous avons développé ce logiciel pour éduquer la prochaine génération.
+
+_Entreprise de Technologie et d'Éducation : GlobalInternet.py_
+"""
+        }
+    },
+    "Lesson 3: Vwayèl nan Nen yo (Nasal Vowels)": {
+        "video_url": "https://dl.dropboxusercontent.com/scl/fi/9u50h0k2vqm8104b5fnn/VwayelNen.mp4?rlkey=nx98124b89qpmc601b5nnrt&st=nasal1&dl=1",
+        "captions": {
+            "Haitian Creole (Original)": """
+**Vwayèl nan nen yo enpòtan anpil pou chanje sans mo yo nan lang kreyòl la. Ann pratik:**
+
+### 4 Vwayèl nan Nen yo:
+1. **AN** — Chanje, Manman, Tan.
+2. **EN** — Enjenyè, Pwogramasyon, Chyen.
+3. **ON** — Bon, Kompanyi, Timoun.
+4. **OUN** — Kouzen, Pwofon.
+
+### Diferans Enpòtan:
+* **"Sa a se yon bon chyen."** vs **"Kòd lojisyèl an byen ekri."** 
+
+_Bati pa Enjenyè Gesner Deslandes_
+""",
+            "English": """
+**Nasal vowels are crucial for changing word meanings in the Haitian Creole language. Let's practice:**
+
+### The 4 Nasal Vowels:
+1. **AN** — Change (Chanje), Mother (Manman), Time (Tan).
+2. **EN** — Engineer (Enjenyè), Programming (Pwogramasyon), Dog (Chyen).
+3. **ON** — Good (Bon), Company (Kompanyi), Children (Timoun).
+4. **OUN** — Cousin (Kouzen), Deep (Pwofon).
+
+### Crucial Difference:
+* **"Sa a se yon bon chyen."** *(This is a good dog.)* vs **"Kòd lojisyèl an byen ekri."** *(The software code is well written.)*
+
+_Built by Engineer Gesner Deslandes_
+""",
+            "Spanish": """
+**Las vocales nasales son cruciales para cambiar el significado de las palabras en el idioma criollo haitiano. Practiquemos:**
+
+### Las 4 Vocales Nasales:
+1. **AN** — Cambiar (Chanje), Madre (Manman), Tiempo (Tan).
+2. **EN** — Ingeniero (Enjenyè), Programación (Pwogramasyon), Perro (Chyen).
+3. **ON** — Bueno (Bon), Compañía (Kompanyi), Niños (Timoun).
+4. **OUN** — Primo (Kouzen), Profundo (Pwofon).
+
+### Diferencia Crucial:
+* **"Sa a se yon bon chyen."** *(Este es un buen perro.)* vs **"Kòd lojisyèl an byen ekri."** *(El código del software está bien escrito.)*
+
+_Construido por el Ingeniero Gesner Deslandes_
+""",
+            "French": """
+**Les voyelles nasales sont cruciales pour changer le sens des mots en créole haïtien. Pratiquons :**
+
+### Les 4 Voyelles Nasales :
+1. **AN** — Changer (Chanje), Mère (Manman), Temps (Tan).
+2. **EN** — Ingénieur (Enjenyè), Programmation (Pwogramasyon), Chien (Chyen).
+3. **ON** — Bon (Bon), Entreprise (Kompanyi), Enfants (Timoun).
+4. **OUN** — Cousin (Kouzen), Profond (Pwofon).
+
+### Différence Cruciale :
+* **"Sa a se yon bon chyen."** *(C'est un bon chien.)* vs **"Kòd lojisyèl an byen ekri."** *(Le code du logiciel est bien écrit.)*
+
+_Bâti par l'Ingénieur Gesner Deslandes_
+"""
+        }
     }
 }
 
@@ -169,7 +287,8 @@ with st.sidebar:
     """, unsafe_allow_html=True)
     st.markdown("---")
     
-    st.header("📖 Navigation")
+    st.header("📖 Lessons Menu")
+    # All three lessons are now selectable right here
     selected_lesson = st.selectbox("Choose a lesson to study:", list(LESSONS_DATA.keys()))
     
     st.markdown("---")
@@ -187,7 +306,7 @@ with st.sidebar:
     st.markdown("[Visit Website](https://globalinternetsitepy-abh7v6tnmskxxnuplrdcgk.streamlit.app/)")
 
 # ================== Main Window Rendering ==================
-# Flexbox container putting Title and GitHub profile image neatly side-by-side
+# Flexbox title wrapper with your GitHub Profile Image
 st.markdown(f"""
 <div class="title-container">
     <h1>An Nou Aprann Kreyòl Ak Gesner Deslandes</h1>
@@ -204,17 +323,17 @@ st.markdown(
 )
 st.markdown("---")
 
-# Layout Split: Video Player vs Dynamic Translated Text
+# Layout Split: Video vs Script Card
 col_video, col_text = st.columns([1.3, 1])
 lesson_content = LESSONS_DATA[selected_lesson]
 
 with col_video:
-    st.markdown("### 🎬 Video Lesson")
+    st.markdown(f"### 🎬 Playing: {selected_lesson}")
     st.video(lesson_content["video_url"])
-    st.caption(f"Playing source container for {selected_lesson}. Media voice tracks are narrated entirely in native Haitian Creole.")
+    st.caption("Media sound streams entirely in native Haitian Creole matching your explicit vocal recordings.")
 
 with col_text:
-    st.markdown(f"### 📄 Text Caption ({selected_language})")
+    st.markdown(f"### 📄 Text Script ({selected_language})")
     st.markdown('<div class="lesson-card">', unsafe_allow_html=True)
     
     current_translation = lesson_content["captions"][selected_language]
@@ -222,5 +341,5 @@ with col_text:
     
     st.markdown('</div>', unsafe_allow_html=True)
 
-# Footer branding line
+# Persistent Footer branding
 st.markdown('<div class="main-footer">© GlobalInternet.py – Built by GESNER DESLANDES.</div>', unsafe_allow_html=True)
