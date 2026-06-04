@@ -37,7 +37,6 @@ st.markdown("""
         border-radius: 15px;
         border-left: 6px solid #8A2BE2; /* Deep purple indicator bar */
         box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        margin-top: 15px;
         margin-bottom: 25px;
     }
     
@@ -211,7 +210,7 @@ _This class is built by Engineer Gesner Deslandes at GlobalInternet.py_
 _Esta clase fue construida por el Ingeniero Gesner Deslandes en GlobalInternet.py_
 """,
             "French": """
-**Combien de lettres y a-t-il dans l'alphabet créole haïtien ? La réponse es simple : L'alphabet créole haïtien contient 32 lettres. Chaque lettre possède un son unique qui ne change jamais.**
+**Combien de lettres y a-t-il dans l'alphabet créole haïtien ? La réponse est simple : L'alphabet créole haïtien contient 32 lettres. Chaque lettre possède un son unique qui ne change jamais.**
 
 ### Les 32 Lettres sont :
 * **A, B, Ch, D, E, È, F, G, H, I, J, K, L, M, N, NG, O, Ò, OU, P, R, S, T, UI, V, W, Y, Z.**
@@ -260,7 +259,7 @@ _Built by Engineer Gesner Deslandes_
 
 ### Las 4 Vocales Nasales:
 1. **AN** — Cambiar (Chanje), Madre (Manman), Tiempo (Tan).
-2. **EN** — Ingeniero (Enjenyè), Programación (Pwogramasyon), Perro (Chyen).
+2. **EN** — Ingeniero (Enjenyè), Programación (Programación), Perro (Chyen).
 3. **ON** — Bueno (Bon), Compañía (Kompanyi), Niños (Timoun).
 4. **OUN** — Primo (Kouzen), Profundo (Pwofon).
 
@@ -314,7 +313,7 @@ _Mèt Klas la: Gesner Deslandes| GlobalInternet.py_
 * **"Enjenyè a se Chèf nan konpayi GlobalInternet.py."** *(The engineer is the Chief at the company GlobalInternet.py.)*
 * **"Nou louvri yon gwo pòt pou edikasyon timoun yo nan peyi a."** *(We opened a big door for children's education in the country.)*
 
-_Class Master: Gesner Deslandes_
+_Class Master: Gesner Deslandes| GlobalInternet.py_
 """,
             "Spanish": """
 **Las consonantes y la forma en que se combinan dan a las palabras una fuerza especial en la pronunciación. Veamos esto:**
@@ -392,41 +391,45 @@ st.markdown("<p style='text-align: center; font-size: 1.2rem; font-style: italic
 st.markdown("<h4 style='text-align: center; color: #8A2BE2 !important; letter-spacing: 1px; font-weight: bold;'>BUILT BY GESNER DESLANDES</h4>", unsafe_allow_html=True)
 st.markdown("---")
 
-# SINGLE COLUMN LAYOUT: Video on top, text details immediately underneath
+# SPLIT SCREEN LAYOUT: Video on the left (col_video), Caption text on the right (col_text)
+col_video, col_text = st.columns([1.2, 1])
 lesson_content = LESSONS_DATA[selected_lesson]
 
-st.markdown(f"### 🎬 Video Interface: {selected_lesson}")
-
-# Check if lesson requires dynamic user video link setup
-if "needs_input" in lesson_content and lesson_content["needs_input"]:
-    st.markdown('<div style="background: white; padding: 15px; border-radius: 10px; border: 1px solid #ccc; margin-bottom:15px;">', unsafe_allow_html=True)
-    st.info(f"💡 **AI Smart Feature Active:** Paste your video URL for this lesson below. Groq will sync it with the content.")
-    user_vid = st.text_input(f"Paste Dropbox link for {selected_lesson}:", key=f"vid_{selected_lesson}")
-    st.markdown('</div>', unsafe_allow_html=True)
+with col_video:
+    st.markdown(f"### 🎬 Video Interface")
     
-    if user_vid:
-        if "dropbox.com" in user_vid and "dl=0" in user_vid:
-            user_vid = user_vid.replace("dl=0", "dl=1")
-        st.video(user_vid)
-    else:
-        st.warning("Waiting for lesson video stream link...")
-else:
-    # Lesson 1 and Lesson 2 which are hardcoded and pre-synchronized
-    st.video(lesson_content["video_url"])
-
-# THE CAPTION IS NOW PERFECTLY POSITIONED DIRECTLY BELOW THE VIDEO CONTAINER
-st.markdown(f"### 📄 Text Caption Lesson ({selected_language})")
-st.markdown('<div class="lesson-card">', unsafe_allow_html=True)
-
-# Smart rendering layer with custom translation arrays
-if selected_language in lesson_content["captions"]:
-    st.markdown(lesson_content["captions"][selected_language])
-else:
-    st.markdown(lesson_content["captions"]["Haitian Creole (Original)"])
-    if selected_language != "Haitian Creole (Original)":
-        st.caption(f"_(AI translation optimization matrix for {selected_language} is running natively via your Groq connection)_")
+    # Check if lesson requires dynamic user video link setup
+    if "needs_input" in lesson_content and lesson_content["needs_input"]:
+        st.markdown('<div style="background: white; padding: 15px; border-radius: 10px; border: 1px solid #ccc; margin-bottom:15px;">', unsafe_allow_html=True)
+        st.info(f"💡 **AI Smart Feature Active:** Paste your video URL for this lesson below.")
+        user_vid = st.text_input(f"Paste Dropbox link for {selected_lesson}:", key=f"vid_{selected_lesson}")
+        st.markdown('</div>', unsafe_allow_html=True)
         
-st.markdown('</div>', unsafe_allow_html=True)
+        if user_vid:
+            if "dropbox.com" in user_vid and "dl=0" in user_vid:
+                user_vid = user_vid.replace("dl=0", "dl=1")
+            st.video(user_vid)
+        else:
+            st.warning("Waiting for lesson video stream link...")
+    else:
+        # Pre-synchronized lessons (Lesson 1 and Lesson 2)
+        st.video(lesson_content["video_url"])
+    
+    st.caption(f"Currently playing: {selected_lesson}")
+
+with col_text:
+    st.markdown(f"### 📄 Text Caption Lesson ({selected_language})")
+    st.markdown('<div class="lesson-card">', unsafe_allow_html=True)
+    
+    # Smart rendering layer with custom translation arrays
+    if selected_language in lesson_content["captions"]:
+        st.markdown(lesson_content["captions"][selected_language])
+    else:
+        st.markdown(lesson_content["captions"]["Haitian Creole (Original)"])
+        if selected_language != "Haitian Creole (Original)":
+            st.caption(f"_(AI translation optimization matrix for {selected_language} is running natively via your Groq connection)_")
+            
+    st.markdown('</div>', unsafe_allow_html=True)
 
 # Persistent Footer branding
 st.markdown('<div class="main-footer">© GlobalInternet.py – Built by GESNER DESLANDES.</div>', unsafe_allow_html=True)
