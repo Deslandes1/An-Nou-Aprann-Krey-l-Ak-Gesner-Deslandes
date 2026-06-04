@@ -32,11 +32,12 @@ st.markdown("""
     
     /* Clean White-Glass Lesson Cards */
     .lesson-card {
-        background: rgba(255, 255, 255, 0.75);
+        background: rgba(255, 255, 255, 0.85);
         padding: 25px;
         border-radius: 15px;
         border-left: 6px solid #8A2BE2; /* Deep purple indicator bar */
         box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        margin-top: 15px;
         margin-bottom: 25px;
     }
     
@@ -82,7 +83,8 @@ has_groq = "GROQ_API_KEY" in st.secrets
 # ================== Interactive Book Content Data ==================
 LESSONS_DATA = {
     "Lesson 1: Lèt È ak Lèt Ò (Accents)": {
-        "video_url": "https://dl.dropboxusercontent.com/scl/fi/2boi3k2p9hm666pa5vmui/E-ak-O.mp4?rlkey=csq569rorqh25ff0bupso8nbp&st=bgct5dv1&dl=1",
+        "needs_input": False,
+        "video_url": "https://www.dropbox.com/scl/fi/2boi3k2p9hm666pa5vmui/E-ak-O.MP4?rlkey=csq569rorqh25ff0bupso8nbp&st=pifdv596&dl=1",
         "captions": {
             "Haitian Creole (Original)": """
 **Genhen 2 lèt ki pran aksan fòs nan kreyòl Ayisyen, se È ak Ò. Men 5 egzanp senp klè pou lèt sa yo:**
@@ -163,20 +165,64 @@ _Ingénieur Gesner Deslandes chez Globalinternet.py Entreprise de Logiciels_
         }
     },
     "Lesson 2: Alfabè Kreyòl la (The 32 Letters)": {
-        "needs_input": True,
+        "needs_input": False,
+        "video_url": "https://www.dropbox.com/scl/fi/ukaqmfddk39ht8k4hysm2/Let-yo.MP4?rlkey=n80plrse7hj2gwl15pn1x1ubp&st=78trjq1m&dl=1",
         "captions": {
             "Haitian Creole (Original)": """
-**Alfabè Kreyòl Ayisyen an genyen 32 lèt ladan li. Chak lèt gen yon sèl son inik. Ann aprann yo ansanm:**
+**Konbyen lèt ki genyen nan alfabè kreyòl la? Repons lan senp: Alfabè Kreyòl Ayisyen an genyen 32 lèt ladan li. Chak lèt gen yon sèl son inik ki pa janm chanje.**
 
-### Vwayèl ak Konsòn Prensipal yo
+### 32 Lèt yo se:
 * **A, B, Ch, D, E, È, F, G, H, I, J, K, L, M, N, NG, O, Ò, OU, P, R, S, T, UI, V, W, Y, Z.**
-* Gen vwayèl nan nen tou: **AN, EN, ON, OUN**.
+* Gen 4 vwayèl espesyal ki pwononse nan nen tou: **AN, EN, ON, OUN**.
 
-### Egzanp teknik:
-* **Klavye** — Timoun yo ap manyen klavye a pou aprann lèt yo.
-* **Lojisyèl** — Nou devlope lojisyèl sa a pou edike pwochen jenerasyon an.
+### Egzanp Pratik pou Lekòl ak Teknoloji:
+* **Klavye** — Timoun yo ap manyen klavye a pou aprann 32 lèt yo.
+* **Lojisyèl** — Nou devlope lojisyèl sa a nan konpayi GlobalInternet.py pou anseye lang manman nou.
+* **Pwofesè** — Pwofesè a kontan anpil lè timoun yo byen pwononse chak son.
 
-_Konpayi Teknoloji ak Edikasyon: GlobalInternet.py_
+_Klas sa a bati pa Enjenyè Gesner Deslandes nan GlobalInternet.py_
+""",
+            "English": """
+**How many letters are there in the Haitian Creole alphabet? The answer is simple: The Haitian Creole Alphabet contains 32 letters. Each letter has a single, unique sound that never changes.**
+
+### The 32 Letters are:
+* **A, B, Ch, D, E, È, F, G, H, I, J, K, L, M, N, NG, O, Ò, OU, P, R, S, T, UI, V, W, Y, Z.**
+* There are also 4 special nasal vowels: **AN, EN, ON, OUN**.
+
+### Practical Examples for School and Tech:
+* **Klavye (Keyboard)** — The children are handling the keyboard to learn the 32 letters.
+* **Lojisyèl (Software)** — We developed this software at GlobalInternet.py to teach our mother tongue.
+* **Pwofesè (Teacher)** — The teacher is very happy when the children pronounce each sound correctly.
+
+_This class is built by Engineer Gesner Deslandes at GlobalInternet.py_
+""",
+            "Spanish": """
+**¿Cuántas letras hay en el alfabeto criollo haitiano? La respuesta es simple: El alfabeto criollo haitiano contiene 32 letras. Cada letra tiene un sonido único que nunca cambia.**
+
+### Las 32 Letras son:
+* **A, B, Ch, D, E, È, F, G, H, I, J, K, L, M, N, NG, O, Ò, OU, P, R, S, T, UI, V, W, Y, Z.**
+* También hay 4 vocales nasales especiales: **AN, EN, ON, OUN**.
+
+### Ejemplos Prácticos para la Escuela y Tecnología:
+* **Klavye (Teclado)** — Los niños están usando el teclado para aprender las 32 letras.
+* **Lojisyèl (Software)** — Desarrollamos este software en GlobalInternet.py para enseñar nuestra lengua materna.
+* **Pwofesè (Profesor)** — El profesor se alegra mucho cuando los niños pronuncian correctamente cada sonido.
+
+_Esta clase fue construida por el Ingeniero Gesner Deslandes en GlobalInternet.py_
+""",
+            "French": """
+**Combien de lettres y a-t-il dans l'alphabet créole haïtien ? La réponse es simple : L'alphabet créole haïtien contient 32 lettres. Chaque lettre possède un son unique qui ne change jamais.**
+
+### Les 32 Lettres sont :
+* **A, B, Ch, D, E, È, F, G, H, I, J, K, L, M, N, NG, O, Ò, OU, P, R, S, T, UI, V, W, Y, Z.**
+* Il y a également 4 voyelles nasales spéciales : **AN, EN, ON, OUN**.
+
+### Exemples Pratiques pour l'École et la Technologie :
+* **Klavye (Clavier)** — Les enfants manipulent le clavier pour apprendre les 32 lettres.
+* **Lojisyèl (Logiciel)** — Nous avons développé ce logiciel chez GlobalInternet.py pour enseigner notre langue maternelle.
+* **Pwofesè (Professeur)** — Le professeur est très heureux quand les enfants prononcent correctement chaque son.
+
+_Ce cours est conçu par l'Ingénieur Gesner Deslandes chez GlobalInternet.py_
 """
         }
     },
@@ -194,6 +240,48 @@ _Konpayi Teknoloji ak Edikasyon: GlobalInternet.py_
 
 ### Diferans Enpòtan:
 * **"Sa a se yon bon chyen."** vs **"Kòd lojisyèl an byen ekri."** _Bati pa Enjenyè Gesner Deslandes_
+""",
+            "English": """
+**Nasal vowels are crucial for changing word meanings in the Haitian Creole language. Let's practice:**
+
+### The 4 Nasal Vowels:
+1. **AN** — Change (Chanje), Mother (Manman), Time (Tan).
+2. **EN** — Engineer (Enjenyè), Programming (Pwogramasyon), Dog (Chyen).
+3. **ON** — Good (Bon), Company (Kompanyi), Children (Timoun).
+4. **OUN** — Cousin (Kouzen), Deep (Pwofon).
+
+### Crucial Difference:
+* **"Sa a se yon bon chyen."** *(This is a good dog.)* vs **"Kòd lojisyèl an byen ekri."** *(The software code is well written.)*
+
+_Built by Engineer Gesner Deslandes_
+""",
+            "Spanish": """
+**Las vocales nasales son cruciales para cambiar el significado de las palabras en el idioma criollo haitiano. Practiquemos:**
+
+### Las 4 Vocales Nasales:
+1. **AN** — Cambiar (Chanje), Madre (Manman), Tiempo (Tan).
+2. **EN** — Ingeniero (Enjenyè), Programación (Pwogramasyon), Perro (Chyen).
+3. **ON** — Bueno (Bon), Compañía (Kompanyi), Niños (Timoun).
+4. **OUN** — Primo (Kouzen), Profundo (Pwofon).
+
+### Diferencia Crucial:
+* **"Sa a se yon bon chyen."** *(Este es un buen perro.)* vs **"Kòd lojisyèl an byen ekri."** *(El código del software está bien escrito.)*
+
+_Construido por el Ingeniero Gesner Deslandes_
+""",
+            "French": """
+**Les voyelles nasales sont cruciales pour changer le sens des mots en créole haïtien. Pratiquons :**
+
+### Les 4 Voyelles Nasales :
+1. **AN** — Changer (Chanje), Mère (Manman), Temps (Tan).
+2. **EN** — Ingénieur (Enjenyè), Programmation (Communauté), Chien (Chyen).
+3. **ON** — Bon (Bon), Entreprise (Kompanyi), Enfants (Timoun).
+4. **OUN** — Cousin (Kouzen), Profond (Pwofon).
+
+### Différence Cruciale :
+* **"Sa a se yon bon chyen."** *(C'est un bon chien.)* vs **"Kòd lojisyèl an byen ekri."** *(Le code du logiciel est bien écrit.)*
+
+_Bâti par l'Ingénieur Gesner Deslandes_
 """
         }
     },
@@ -213,6 +301,48 @@ _Konpayi Teknoloji ak Edikasyon: GlobalInternet.py_
 * **"Nou louvri yon gwo pòt pou edikasyon timoun yo nan peyi a."**
 
 _Mèt Klas la: Gesner Deslandes| GlobalInternet.py_
+""",
+            "English": """
+**Consonants and the way they blend give words a special power in pronunciation. Let's look at this:**
+
+### Special Consonants:
+* **CH** — Change (Chanje), Search (Chache), Chief (Chèf).
+* **NG** — Found at the end of words like: Camping (Kamping), Gong.
+* **TJ** — Used for specific localized sounds.
+
+### Sentence Examples:
+* **"Enjenyè a se Chèf nan konpayi GlobalInternet.py."** *(The engineer is the Chief at the company GlobalInternet.py.)*
+* **"Nou louvri yon gwo pòt pou edikasyon timoun yo nan peyi a."** *(We opened a big door for children's education in the country.)*
+
+_Class Master: Gesner Deslandes_
+""",
+            "Spanish": """
+**Las consonantes y la forma en que se combinan dan a las palabras una fuerza especial en la pronunciación. Veamos esto:**
+
+### Consonantes Especiales:
+* **CH** — Cambiar (Chanje), Buscar (Chache), Jefe (Chèf).
+* **NG** — Se encuentra al final de palabras como: Camping (Kamping), Gong.
+* **TJ** — Se utiliza para algunos sonidos locales específicos.
+
+### Ejemplos de Frases:
+* **"Enjenyè a se Chèf nan konpayi GlobalInternet.py."** *(El ingeniero es el Jefe de la empresa GlobalInternet.py.)*
+* **"Nou louvri yon gwo pòt pou edikasyon timoun yo nan peyi a."** *(Abrimos una gran puerta para la educación de los niños en el país.)*
+
+_Maestro de Clase: Gesner Deslandes_
+""",
+            "French": """
+**Les consonnes et leur façon de s'associer donnent aux mots une force spéciale dans la prononciation. Regardons cela :**
+
+### Consonnes Spéciales :
+* **CH** — Changer (Chanje), Chercher (Chache), Chef (Chèf).
+* **NG** — Se trouve à la fin de mots comme : Camping (Kamping), Gong.
+* **TJ** — Utilisé pour certains sons locaux très précis.
+
+### Exemples de Phrases :
+* **"Enjenyè a se Chèf nan konpayi GlobalInternet.py."** *(L'ingénieur est le Chef au sein de l'entreprise GlobalInternet.py.)*
+* **"Nou louvri yon gwo pòt pou edikasyon timoun yo nan peyi a."** *(Nous ouvrons une grande porte pour l'éducation des enfants dans le pays.)*
+
+_Maître de Classe : Pour GlobalInternet.py_
 """
         }
     }
@@ -262,43 +392,41 @@ st.markdown("<p style='text-align: center; font-size: 1.2rem; font-style: italic
 st.markdown("<h4 style='text-align: center; color: #8A2BE2 !important; letter-spacing: 1px; font-weight: bold;'>BUILT BY GESNER DESLANDES</h4>", unsafe_allow_html=True)
 st.markdown("---")
 
-col_video, col_text = st.columns([1.3, 1])
+# SINGLE COLUMN LAYOUT: Video on top, text details immediately underneath
 lesson_content = LESSONS_DATA[selected_lesson]
 
-with col_video:
-    st.markdown(f"### 🎬 Video Interface")
-    
-    # Check if lesson requires dynamic user video drop via Dropbox or local link
-    if "needs_input" in lesson_content and lesson_content["needs_input"]:
-        st.markdown('<div style="background: white; padding: 15px; border-radius: 10px; border: 1px solid #ccc;">', unsafe_allow_html=True)
-        st.info(f"💡 **AI Smart Feature Active:** Paste your video URL for this lesson below. Groq will analyze and sync it automatically.")
-        user_vid = st.text_input(f"Paste Dropbox link (or upload) for {selected_lesson}:", key=f"vid_{selected_lesson}")
-        st.markdown('</div>', unsafe_allow_html=True)
-        
-        if user_vid:
-            # Dynamic link fixing for dropbox raw streams
-            if "dropbox.com" in user_vid and "dl=0" in user_vid:
-                user_vid = user_vid.replace("dl=0", "dl=1")
-            st.video(user_vid)
-        else:
-            st.warning("Waiting for lesson video stream link...")
-    else:
-        # Lesson 1 which is hardcoded and pre-synchronized
-        st.video(lesson_content["video_url"])
+st.markdown(f"### 🎬 Video Interface: {selected_lesson}")
 
-with col_text:
-    st.markdown(f"### 📄 Text Script ({selected_language})")
-    st.markdown('<div class="lesson-card">', unsafe_allow_html=True)
-    
-    # If the user selected another language and translation doesn't exist, we fallback safely or notify
-    if selected_language in lesson_content["captions"]:
-        st.markdown(lesson_content["captions"][selected_language])
-    else:
-        # Smart fallback if translations are built dynamically
-        st.markdown(lesson_content["captions"]["Haitian Creole (Original)"])
-        if selected_language != "Haitian Creole (Original)":
-            st.caption(f"_(AI translation optimization matrix for {selected_language} is running natively via your Groq connection)_")
-            
+# Check if lesson requires dynamic user video link setup
+if "needs_input" in lesson_content and lesson_content["needs_input"]:
+    st.markdown('<div style="background: white; padding: 15px; border-radius: 10px; border: 1px solid #ccc; margin-bottom:15px;">', unsafe_allow_html=True)
+    st.info(f"💡 **AI Smart Feature Active:** Paste your video URL for this lesson below. Groq will sync it with the content.")
+    user_vid = st.text_input(f"Paste Dropbox link for {selected_lesson}:", key=f"vid_{selected_lesson}")
     st.markdown('</div>', unsafe_allow_html=True)
+    
+    if user_vid:
+        if "dropbox.com" in user_vid and "dl=0" in user_vid:
+            user_vid = user_vid.replace("dl=0", "dl=1")
+        st.video(user_vid)
+    else:
+        st.warning("Waiting for lesson video stream link...")
+else:
+    # Lesson 1 and Lesson 2 which are hardcoded and pre-synchronized
+    st.video(lesson_content["video_url"])
 
+# THE CAPTION IS NOW PERFECTLY POSITIONED DIRECTLY BELOW THE VIDEO CONTAINER
+st.markdown(f"### 📄 Text Caption Lesson ({selected_language})")
+st.markdown('<div class="lesson-card">', unsafe_allow_html=True)
+
+# Smart rendering layer with custom translation arrays
+if selected_language in lesson_content["captions"]:
+    st.markdown(lesson_content["captions"][selected_language])
+else:
+    st.markdown(lesson_content["captions"]["Haitian Creole (Original)"])
+    if selected_language != "Haitian Creole (Original)":
+        st.caption(f"_(AI translation optimization matrix for {selected_language} is running natively via your Groq connection)_")
+        
+st.markdown('</div>', unsafe_allow_html=True)
+
+# Persistent Footer branding
 st.markdown('<div class="main-footer">© GlobalInternet.py – Built by GESNER DESLANDES.</div>', unsafe_allow_html=True)
