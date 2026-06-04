@@ -274,6 +274,67 @@ _Construido por el Ingeniero Gesner Deslandes_
 _Bâti par l'Ingénieur Gesner Deslandes_
 """
         }
+    },
+    "Lesson 4: Konsòn ak Dife Son (Consonants & Consonant Blends)": {
+        "video_url": "https://dl.dropboxusercontent.com/scl/fi/a45f90h2vqk8104b5fnn/Konson.mp4?rlkey=zx09124b89qpmc701b5nnrt&st=konson1&dl=1",
+        "captions": {
+            "Haitian Creole (Original)": """
+**Konsòn yo ak fason yo kole ansanm bay mo yo yon fòs espesyal nan pwononsyasyon. Ann gade sa:**
+
+### Konsòn Espesyal:
+* **CH** — Chanje, Chache, Chèf.
+* **NG** — Rankontre nan fen mo tankou: Kamping, Gong.
+* **TJ** — Yo itilize li pou kèk son trè presi lokal.
+
+### Egzanp fraz:
+* **"Enjenyè a se Chèf nan konpayi GlobalInternet.py."**
+* **"Nou louvri yon gwo pòt pou edikasyon timoun yo nan peyi a."**
+
+_Mèt Klas la: Gesner Deslandes_
+""",
+            "English": """
+**Consonants and the way they blend give words a special power in pronunciation. Let's look at this:**
+
+### Special Consonants:
+* **CH** — Change (Chanje), Search (Chache), Chief (Chèf).
+* **NG** — Found at the end of words like: Camping (Kamping), Gong.
+* **TJ** — Used for specific localized sounds.
+
+### Sentence Examples:
+* **"Enjenyè a se Chèf nan konpayi GlobalInternet.py."** *(The engineer is the Chief at the company GlobalInternet.py.)*
+* **"Nou louvri yon gwo pòt pou edikasyon timoun yo nan peyi a."** *(We opened a big door for children's education in the country.)*
+
+_Class Master: Gesner Deslandes_
+""",
+            "Spanish": """
+**Las consonantes y la forma en que se combinan dan a las palabras una fuerza especial en la pronunciación. Veamos esto:**
+
+### Consonantes Especiales:
+* **CH** — Cambiar (Chanje), Buscar (Chache), Jefe (Chèf).
+* **NG** — Se encuentra al final de palabras como: Camping (Kamping), Gong.
+* **TJ** — Se utiliza para algunos sonidos locales específicos.
+
+### Ejemplos de Frases:
+* **"Enjenyè a se Chèf nan konpayi GlobalInternet.py."** *(El ingeniero es el Jefe de la empresa GlobalInternet.py.)*
+* **"Nou louvri yon gwo pòt pou edikasyon timoun yo nan peyi a."** *(Abrimos una gran puerta para la educación de los niños en el país.)*
+
+_Maestro de Clase: Gesner Deslandes_
+""",
+            "French": """
+**Les consonnes et leur façon de s'associer donnent aux mots une force spéciale dans la prononciation. Regardons cela :**
+
+### Consonnes Spéciales :
+* **CH** — Changer (Chanje), Chercher (Chache), Chef (Chèf).
+* **NG** — Se trouve à la fin de mots comme : Camping (Kamping), Gong.
+* **TJ** — Utilisé pour certains sons locaux très précis.
+
+### Exemples de Phrases :
+* **"Enjenyè a se Chèf nan konpayi GlobalInternet.py."** *(L'ingénieur est le Chef au sein de l'entreprise GlobalInternet.py.)*
+* **"Nou louvri yon gwo pòt pou edikasyon timoun yo nan peyi a."** *(Nous ouvrons une grande porte pour l'éducation des enfants dans le pays.)*
+
+_Maître de Classe : Gesner Deslandes_
+"""
+        }
     }
 }
 
@@ -288,7 +349,7 @@ with st.sidebar:
     st.markdown("---")
     
     st.header("📖 Lessons Menu")
-    # All three lessons are now selectable right here
+    # All 4 lessons are completely loaded into this sidebar selection matrix
     selected_lesson = st.selectbox("Choose a lesson to study:", list(LESSONS_DATA.keys()))
     
     st.markdown("---")
@@ -306,7 +367,7 @@ with st.sidebar:
     st.markdown("[Visit Website](https://globalinternetsitepy-abh7v6tnmskxxnuplrdcgk.streamlit.app/)")
 
 # ================== Main Window Rendering ==================
-# Flexbox title wrapper with your GitHub Profile Image
+# Flexbox title wrapper with your GitHub Profile Image on the right
 st.markdown(f"""
 <div class="title-container">
     <h1>An Nou Aprann Kreyòl Ak Gesner Deslandes</h1>
