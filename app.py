@@ -8,32 +8,54 @@ st.set_page_config(
     layout="wide"
 )
 
-# ================== Custom Custom CSS Branding ==================
+# ================== Custom CSS (Light Purple Theme & Layout) ==================
 st.markdown("""
 <style>
-    /* Dark professional tech theme */
-    .stApp { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); }
+    /* Entire app background set to a beautiful light purple */
+    .stApp, [data-testid="stSidebar"] {
+        background-color: #E6E6FA !important; /* Lavender / Light Purple */
+    }
     
-    /* Sidebar styling */
+    /* Sidebar specific styling adjusting elements over light purple */
     [data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #0f3460 0%, #1a1a2e 100%);
-        border-right: 2px solid #e94560;
+        border-right: 3px solid #8A2BE2;
     }
     [data-testid="stSidebar"] .stMarkdown, [data-testid="stSidebar"] label, [data-testid="stSidebar"] h2 {
-        color: #ffffff !important;
+        color: #333333 !important;
     }
     
-    /* Typography color overrides */
-    h1, h2, h3 { color: #ffd966 !important; }
-    p, li, span, .stMarkdown { color: #ffffff !important; }
+    /* Clean Dark Typography for high readability over light background */
+    h1, h2, h3, h4 { color: #4B0082 !important; } /* Indigo accents */
+    p, li, span, .stMarkdown { color: #111111 !important; }
     
-    /* Card design for lessons */
+    /* Clean White-Glass Lesson Cards */
     .lesson-card {
-        background: rgba(255, 255, 255, 0.05);
+        background: rgba(255, 255, 255, 0.75);
         padding: 25px;
         border-radius: 15px;
-        border-left: 5px solid #e94560;
+        border-left: 6px solid #8A2BE2; /* Deep purple indicator bar */
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         margin-bottom: 25px;
+    }
+    
+    /* Custom alignment wrapper for Title & Profile Image */
+    .title-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 5px;
+    }
+    .title-container h1 {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .title-avatar {
+        border-radius: 50%;
+        width: 75px;
+        height: 75px;
+        border: 3px solid #8A2BE2;
+        object-fit: cover;
     }
     
     /* Footer styling */
@@ -41,16 +63,18 @@ st.markdown("""
         text-align: center;
         margin-top: 3rem;
         padding: 1.5rem;
-        border-top: 2px solid #e94560;
-        color: #ffd966 !important;
+        border-top: 2px solid #8A2BE2;
+        color: #4B0082 !important;
         font-weight: bold;
         font-size: 1.1rem;
     }
 </style>
 """, unsafe_allow_html=True)
 
+# ================== GitHub Profile Picture Link ==================
+GITHUB_AVATAR_URL = "https://github.com/Deslandes1.png"
+
 # ================== Interactive Book Content Data ==================
-# This structure stores the exact Haitian Creole script you speak, plus accurate translations.
 LESSONS_DATA = {
     "Lesson 1: Lèt È ak Lèt Ò (Accents)": {
         "video_url": "https://dl.dropboxusercontent.com/scl/fi/2boi3k2p9hm666pa5vmui/E-ak-O.mp4?rlkey=csq569rorqh25ff0bupso8nbp&st=bgct5dv1&dl=1",
@@ -133,15 +157,14 @@ _Ingénieur Gesner Deslandes chez Globalinternet.py Entreprise de Logiciels_
 """
         }
     }
-    # You can quickly paste new video lessons matching this exact layout right here!
 }
 
 # ================== Sidebar Navigation & Controls ==================
 with st.sidebar:
-    st.markdown("""
+    st.markdown(f"""
     <div style="text-align: center; margin-bottom: 15px;">
-        <img src="https://raw.githubusercontent.com/Deslandes1/Haitian-Creole-Background-Music-Sound/main/Gesner%20Deslandes.png" style="border-radius: 50%; width: 110px; border: 3px solid #ffd966;">
-        <h2 style="margin-top: 10px; font-size: 1.3rem;">GlobalInternet.py</h2>
+        <img src="{GITHUB_AVATAR_URL}" style="border-radius: 50%; width: 110px; border: 3px solid #8A2BE2;">
+        <h2 style="margin-top: 10px; font-size: 1.4rem; font-weight: bold;">GlobalInternet.py</h2>
     </div>
     """, unsafe_allow_html=True)
     st.markdown("---")
@@ -151,7 +174,6 @@ with st.sidebar:
     
     st.markdown("---")
     st.header("🌐 Book Translation")
-    # Language selector handles dynamic on-the-fly text changes
     selected_language = st.selectbox(
         "Translate Lesson Text Caption into:",
         ["Haitian Creole (Original)", "English", "Spanish", "French"]
@@ -165,25 +187,29 @@ with st.sidebar:
     st.markdown("[Visit Website](https://globalinternetsitepy-abh7v6tnmskxxnuplrdcgk.streamlit.app/)")
 
 # ================== Main Window Rendering ==================
-# Header with the required title and GitHub avatar setup
-st.markdown("<h1 style='text-align: center; font-size: 2.8rem;'>An Nou Aprann Kreyòl Ak Gesner Deslandes</h1>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center; font-size: 1.2rem; font-style: italic;'>An Interactive Audio-Visual Software Book for Mastering Haitian Creole and Modern Tech Terms</p>", unsafe_allow_html=True)
+# Flexbox container putting Title and GitHub profile image neatly side-by-side
+st.markdown(f"""
+<div class="title-container">
+    <h1>An Nou Aprann Kreyòl Ak Gesner Deslandes</h1>
+    <img class="title-avatar" src="{GITHUB_AVATAR_URL}">
+</div>
+""", unsafe_allow_html=True)
 
-# Required structural ownership marking on the main page canvas
+st.markdown("<p style='text-align: center; font-size: 1.2rem; font-style: italic; color: #333333;'>An Interactive Audio-Visual Software Book for Mastering Haitian Creole and Modern Tech Terms</p>", unsafe_allow_html=True)
+
+# Required structural ownership marking
 st.markdown(
-    "<h4 style='text-align: center; color: #e94560 !important; letter-spacing: 1px;'>BUILT BY GESNER DESLANDES</h4>", 
+    "<h4 style='text-align: center; color: #8A2BE2 !important; letter-spacing: 1px; font-weight: bold;'>BUILT BY GESNER DESLANDES</h4>", 
     unsafe_allow_html=True
 )
 st.markdown("---")
 
-# Layout Split: Left side runs the Video Media Player, Right side shows the Dynamic Script Card
+# Layout Split: Video Player vs Dynamic Translated Text
 col_video, col_text = st.columns([1.3, 1])
-
 lesson_content = LESSONS_DATA[selected_lesson]
 
 with col_video:
-    st.markdown("### 🎬 Video Lesson Layout")
-    # Streamed audio-visual array synced perfectly with Dropbox streaming headers
+    st.markdown("### 🎬 Video Lesson")
     st.video(lesson_content["video_url"])
     st.caption(f"Playing source container for {selected_lesson}. Media voice tracks are narrated entirely in native Haitian Creole.")
 
@@ -191,11 +217,10 @@ with col_text:
     st.markdown(f"### 📄 Text Caption ({selected_language})")
     st.markdown('<div class="lesson-card">', unsafe_allow_html=True)
     
-    # Renders the localized map array selected from the sidebar dynamically
     current_translation = lesson_content["captions"][selected_language]
     st.markdown(current_translation)
     
     st.markdown('</div>', unsafe_allow_html=True)
 
-# Mandatory persistent branding signature line at the very bottom
+# Footer branding line
 st.markdown('<div class="main-footer">© GlobalInternet.py – Built by GESNER DESLANDES.</div>', unsafe_allow_html=True)
